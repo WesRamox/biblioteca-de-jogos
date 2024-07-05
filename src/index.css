@@ -81,12 +81,14 @@ input, button {
 .games {
   display: flex;
   flex-wrap: wrap;
+  gap: 4rem;
+  flex-direction: column;
 }
 
 .games > div {
   display: flex;
   align-items: start;
-  gap: 2rem;
+  gap: 1.2rem;
   height: 8rem;
   margin-top: 2rem;
   width: 28rem;
@@ -94,11 +96,13 @@ input, button {
 
 .games img {
   height: 100%;
-  width: 10rem;
+  width: 12rem;
+  height: 12rem;
   object-fit: cover;
 }
 
 .games h2 {
+  font-size: 1.2rem;
   margin: 0;
 }
 
