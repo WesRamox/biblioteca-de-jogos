@@ -15,6 +15,7 @@ export default function App() {
             <Game 
               key={game.id}
               title={game.title}
+              time={game.time}
               cover={game.cover}
               onRemove={() => removeGame(game.id)}
             />

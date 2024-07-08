@@ -13,9 +13,13 @@ export default function NewGameForm({ addGame }) {
   // handleSubmit é a função que adiciona as funcionalidades ao enviar o formulario.
   const handleSubmit = (ev) => {
     ev.preventDefault()
-    addGame({ title, cover })
-    setTitle("")
-    setCover("")
+    if(title !== "" && cover !== "") {
+      addGame({ title, cover })
+      setTitle("")
+      setCover("")
+    } else {
+      alert("Preencha todos os campos para adicionar um Jogo!")
+    }
   }
 
   return(

@@ -9,10 +9,14 @@ export default function useGameCollection() {
   
   // Adicionar um novo jogo
   const addGame = ({ title, cover }) => {
+    const today =  new Date()
+    const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+
     const id = Math.floor(Math.random() * 1000000)
     const game = { 
       id, 
-      title, 
+      title,
+      time: today.toLocaleDateString('pt-BR', options), 
       cover 
     }
 
