@@ -23,7 +23,7 @@ export default function App() {
             />
         )) 
         : (
-           <h2 style={{marginTop: "2rem"}}>Nenhum jogo cadastrado na biblioteca!</h2>
+           <h2 style={{marginTop: "2rem", color: "gray"}}>Nenhum jogo cadastrado na biblioteca!</h2>
           )}
       </div>
     </div>
