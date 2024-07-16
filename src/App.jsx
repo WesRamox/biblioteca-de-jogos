@@ -3,7 +3,7 @@ import NewGameForm from "./components/NewGameForm"
 import useGameCollection from "./hooks/useGameCollection"
 
 export default function App() {
-  const { games, addGame, removeGame } = useGameCollection()
+  const { games, addGame, removeGame, editGame } = useGameCollection()
 
   return(
     <div id="app">
@@ -17,7 +17,9 @@ export default function App() {
               title={game.title}
               time={game.time}
               cover={game.cover}
+              historyTime={game.historyTime}
               onRemove={() => removeGame(game.id)}
+              onEdit={() => editGame(game.id)}
             />
         )) 
         : (

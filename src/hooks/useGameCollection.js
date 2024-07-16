@@ -8,7 +8,7 @@ export default function useGameCollection() {
   })
   
   // Adicionar um novo jogo
-  const addGame = ({ title, cover }) => {
+  const addGame = ({ title, cover, historyTime }) => {
     const today =  new Date()
     const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
 
@@ -16,6 +16,7 @@ export default function useGameCollection() {
     const game = { 
       id, 
       title,
+      historyTime,
       time: today.toLocaleDateString('pt-BR', options), 
       cover 
     }
@@ -36,5 +37,9 @@ export default function useGameCollection() {
     })
   }
 
-  return { games, addGame, removeGame }
+  const editGame = (id) => {
+    console.log(id)
+  }
+
+  return { games, addGame, removeGame, editGame }
 }

@@ -4,10 +4,12 @@ Game.propTypes = {
   title: PropTypes.string,
   time: PropTypes.string,
   cover: PropTypes.string,
-  onRemove: PropTypes.func
+  historyTime: PropTypes.string,
+  onRemove: PropTypes.func,
+  onEdit: PropTypes.func
 }
 
-export default function Game({ title, time, cover, onRemove }) {
+export default function Game({ title, time, cover, historyTime, onRemove, onEdit }) {
   
   return(
     <div>
@@ -15,7 +17,11 @@ export default function Game({ title, time, cover, onRemove }) {
       <div>
         <h2>{title}</h2>
         <p>{time}</p>
-        <button onClick={onRemove}>Remover</button>
+        <p>{historyTime} Horas jogadas</p>
+        <div style={{display: "flex", gap: "1rem"}}>
+          <button onClick={onRemove}>Remover</button>
+          <button onClick={onEdit}>Editar</button>
+        </div>
       </div>
     </div>
   )
